@@ -1,0 +1,9 @@
+*.iws
+*Db.properties
+*Db.script
+.settings
+*.log
+/*DB.*
+/cobertura.ser
+.DS_Store
+/target/
