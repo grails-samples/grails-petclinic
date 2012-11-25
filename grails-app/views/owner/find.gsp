@@ -24,6 +24,6 @@
 		</g:form>
 
 		<br/>
-		<g:link controller="owner" action="add">Add Owner</g:link></a>
+		<g:link controller="owner" action="add">Add Owner</g:link>
 	</body>
 </html>

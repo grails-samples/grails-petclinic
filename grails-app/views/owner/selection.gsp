@@ -8,19 +8,19 @@
 		<h2>Owners:</h2>
 
 		<table>
-			<tr>
 			<thead>
+			<tr>
 				<th>Name</th>
 				<th>Address</th>
 				<th>City</th>
 				<th>Telephone</th>
 				<th>Pets</th>
-			</thead>
 			</tr>
+			</thead>
 			<g:each var="owner" in="${owners}">
 				<tr>
 					<td>
-						<g:link action="show" id="${owner.id}">${owner.firstName} ${owner.lastName}</g:link></a>
+						<g:link action="show" id="${owner.id}">${owner.firstName} ${owner.lastName}</g:link>
 					</td>
 					<td>${owner.address}</td>
 					<td>${owner.city}</td>

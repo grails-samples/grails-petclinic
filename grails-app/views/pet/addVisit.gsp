@@ -9,14 +9,14 @@
 		<g:form action="addVisit">
 			<b>Pet:</b>
 			<table width="333">
-				<tr>
 				<thead>
+				<tr>
 					<th>Name</th>
 					<th>Birth Date</th>
 					<th>Type</th>
 					<th>Owner</th>
-				</thead>
 				</tr>
+				</thead>
 				<tr>
 					<td>${visit.pet.name}</td>
 					<td><g:formatDate date="${visit.pet.birthDate}" format="yyyy-MM-dd"/></td>

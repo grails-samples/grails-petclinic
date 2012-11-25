@@ -15,9 +15,6 @@ grails.project.dependency.resolution = {
 		grailsPlugins()
 		grailsHome()
 		grailsCentral()
-
-		mavenLocal()
-		mavenCentral()
 	}
 
 	dependencies {}
@@ -27,7 +24,5 @@ grails.project.dependency.resolution = {
 		runtime ":jquery:1.8.0"
 		runtime ":resources:1.1.6"
 		build ":tomcat:$grailsVersion"
-		runtime ":database-migration:1.1"
-		compile ":cache:1.0.0"
 	}
 }
