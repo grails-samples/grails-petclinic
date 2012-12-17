@@ -14,7 +14,7 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 		<r:require modules="jquery,syntaxHighlighter,application"/>
 		<g:layoutHead/>
-		<r:layoutResources />
+		<r:layoutResources/>
 		<r:script>
 		SyntaxHighlighter.all()
 		</r:script>
@@ -35,6 +35,6 @@
 				<div><g:link uri="/">Home</g:link></div>
 			</footer>
 		</div>
-		<r:layoutResources />
+		<r:layoutResources/>
 	</body>
 </html>
