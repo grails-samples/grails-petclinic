@@ -45,7 +45,7 @@ class ViewSourceFilters {
 			// exception is thrown by the action or view. This allows you to add
 			// extra processing in the case of errors.
 			afterView = { Exception e ->
->>>>>>> Handle null model in 'after' filter.
+//TODO: >>>>>>> Handle null model in 'after' filter.
 			}
 		}
 	}

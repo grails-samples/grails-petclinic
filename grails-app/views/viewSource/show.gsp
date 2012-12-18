@@ -27,7 +27,7 @@
 		<g:hiddenField name="controllerName" value="${controller}"/>
 		<g:hiddenField name="actionName" value="${action}"/>
 		<g:hiddenField name="id" value="${id}"/>
-		<textarea id="controllerSourceCode" name="controllerSourceCode">${controllerSourceCode}</textarea>
+		<textarea id="sourceCode" name="sourceCode">${sourceCode}</textarea>
 		<g:submitButton name="save" value="Save"/>
 	</g:form>
 </body>
