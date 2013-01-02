@@ -35,7 +35,6 @@ class ViewSourceFilters {
 				// being used for the current page.
 				model["controllerClass"] = controllerClass.clazz.name
 				model["viewPath"] = "$controllerName:${model['viewName'] ?: actionName}"
-
 				// Return the model for use by the view.
 				return model
 			}

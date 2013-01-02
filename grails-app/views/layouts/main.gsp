@@ -19,10 +19,9 @@
 	<body>
 		<header><g:img dir="images" file="banner-graphic.png"/></header>
 		<aside>
-			<h2>View source for</h2>
+			<h2>View &amp; edit source for</h2>
 			<ul>
-				<li><g:link controller="viewSource" action="controller" id="${controllerClass}">Controller</g:link></li>
-				<li><g:link controller="viewSource" action="view" id="${viewPath}">View</g:link></li>
+				<li><g:link controller="viewSource" action="controllerAndView" params="${[viewPath:viewPath,controllerClass:controllerClass,viewName:(viewName ?: actionName),controllerName:controllerName]}">View & Controller</g:link></li>
 			</ul>
 		</aside>
 		<div id="main">
