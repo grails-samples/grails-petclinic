@@ -35,7 +35,6 @@ class ViewSourceFilters {
 				// being used for the current page.
 				model["controllerClass"] = controllerClass.clazz.name
 				model["viewPath"] = "$controllerName:${model['viewName'] ?: actionName}"
-
 				// Return the model for use by the view.
 				return model
 			}
@@ -45,7 +44,7 @@ class ViewSourceFilters {
 			// exception is thrown by the action or view. This allows you to add
 			// extra processing in the case of errors.
 			afterView = { Exception e ->
->>>>>>> Handle null model in 'after' filter.
+//TODO: >>>>>>> Handle null model in 'after' filter.
 			}
 		}
 	}
