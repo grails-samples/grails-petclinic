@@ -12,20 +12,16 @@
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
-		<r:require modules="jquery,syntaxHighlighter,application"/>
+		<r:require modules="jquery,application"/>
 		<g:layoutHead/>
-		<r:layoutResources />
-		<r:script>
-		SyntaxHighlighter.all()
-		</r:script>
+		<r:layoutResources/>
 	</head>
 	<body>
 		<header><g:img dir="images" file="banner-graphic.png"/></header>
 		<aside>
-			<h2>View source for</h2>
+			<h2>View &amp; edit source for</h2>
 			<ul>
-				<li><g:link controller="viewSource" action="controller" id="${controllerClass}">Controller</g:link></li>
-				<li><g:link controller="viewSource" action="view" id="${viewPath}">View</g:link></li>
+				<li><g:link controller="viewSource" action="controllerAndView" params="${[viewPath:viewPath,controllerClass:controllerClass,viewName:(viewName ?: actionName),controllerName:controllerName]}">View & Controller</g:link></li>
 			</ul>
 		</aside>
 		<div id="main">
@@ -35,6 +31,6 @@
 				<div><g:link uri="/">Home</g:link></div>
 			</footer>
 		</div>
-		<r:layoutResources />
+		<r:layoutResources/>
 	</body>
 </html>
