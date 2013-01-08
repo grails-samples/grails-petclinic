@@ -18,19 +18,22 @@
 	</head>
 	<body>
 		<header><g:img dir="images" file="banner-graphic.png"/></header>
+
+		<g:if test="${controllerName != 'viewSource'}">
 		<aside>
-			<h2>View &amp; edit source for</h2>
-			<ul>
-				<li><g:link controller="viewSource" action="controllerAndView" params="${[viewPath:viewPath,controllerClass:controllerClass,viewName:(viewName ?: actionName),controllerName:controllerName]}">View & Controller</g:link></li>
-			</ul>
+			<h2><g:link controller="viewSource" action="controllerAndView"
+			            params="[viewPath:viewPath,controllerClass:controllerClass,viewName:(viewName ?: actionName),controllerName:controllerName]">View/edit source for this page</g:link></h2>
 		</aside>
+		</g:if>
+
 		<div id="main">
 			<g:layoutBody/>
-			<footer>
-				<div class="logo"><g:img dir="images" file="springsource-logo.png"/></div>
-				<div><g:link uri="/">Home</g:link></div>
-			</footer>
 		</div>
+
+		<footer>
+			<div class="logo"><g:img dir="images" file="springsource-logo.png"/></div>
+			<div><g:link uri="/">Home</g:link></div>
+		</footer>
 		<r:layoutResources/>
 	</body>
 </html>

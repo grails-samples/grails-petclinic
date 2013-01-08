@@ -74,7 +74,6 @@ class ViewSourceController {
     }
 
     private getFileContent(String path, int spacesForIndent) {
-        println path
         def content = new File(path).getText("UTF-8")
         return content.replace('\t', ' ' * spacesForIndent)
     }
