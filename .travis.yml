@@ -1,12 +1,20 @@
 language: groovy
+
 jdk:
    - oraclejdk8
    - oraclejdk7
 #   - oraclejdk6 # Is End-of-life and not supported by travis anymore
    - openjdk7
    - openjdk6
+
 branches:
   only:
     - master
+
+env:
+  - TEST_SUITE=unit:
+  - TEST_SUITE=integration:
+#  - TEST_SUITE=functional
+
 script: ./grailsw refresh-dependencies  --non-interactive
-  && ./grailsw test-app --non-interactive
+  && ./grailsw test-app $TEST_SUITE --non-interactive
