@@ -1,7 +1,8 @@
 language: groovy
 jdk:
+   - oraclejdk8
    - oraclejdk7
-   - oraclejdk6
+#   - oraclejdk6 # Is End-of-life and not supported by travis anymore
    - openjdk7
    - openjdk6
 branches:
