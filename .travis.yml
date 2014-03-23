@@ -16,4 +16,4 @@ env:
   - TEST_SUITE="integration:"
 #  - TEST_SUITE=functional
 
-script: ./grailsw test-app $TEST_SUITE --non-interactive -refresh-dependencies
+script: "./grailsw test-app $TEST_SUITE --non-interactive -refresh-dependencies"
