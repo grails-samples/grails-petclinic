@@ -17,5 +17,5 @@ env:
 #  - TEST_SUITE=functional
 
 script:
-  - "echo TRAVIS_BUILD_NUMBER: $TRAVIS_BUILD_NUMBER"
+  - "echo --- Doing the $TEST_SUITE test suite"
   - "./grailsw test-app $TEST_SUITE --non-interactive -refresh-dependencies"
