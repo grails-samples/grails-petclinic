@@ -8,5 +8,5 @@ jdk:
 branches:
   only:
     - master
-script: ./grailsw refresh-dependencies
-  && ./grailsw test-app
+script: ./grailsw refresh-dependencies  --non-interactive
+  && ./grailsw test-app --non-interactive
