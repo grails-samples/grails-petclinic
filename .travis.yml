@@ -18,4 +18,4 @@ env:
 
 script:
   - "echo --- Doing the $TEST_SUITE test suite"
-  - "./grailsw test-app $TEST_SUITE --non-interactive -refresh-dependencies"
+  - "./grailsw test-app $TEST_SUITE -non-interactive -refresh-dependencies"
