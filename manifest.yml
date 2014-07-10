@@ -1,0 +1,7 @@
+---
+applications:
+- name: petclinic
+  memory: 1G
+  instances: 1
+  path: target/petclinic-0.1.war
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
