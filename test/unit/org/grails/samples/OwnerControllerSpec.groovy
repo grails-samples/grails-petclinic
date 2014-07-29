@@ -35,6 +35,8 @@ class OwnerControllerSpec extends Specification{
 
 	void 'can add a valid owner'() {
         given:
+        request.method = "POST"
+
 		controller.params.owner = [
 			firstName: 'fred',
 			lastName:  'flintstone',
@@ -46,7 +48,7 @@ class OwnerControllerSpec extends Specification{
 		controller.add()
 
         then:
-		controller.response.redirectUrl =~ '/owner/show/\\d+'
+		response.redirectUrl =~ '/owner/show/\\d+'
 	}
 
 	void 'finds no owners when there are none'() {
