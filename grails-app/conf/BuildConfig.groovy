@@ -40,6 +40,9 @@ grails.project.dependency.resolution = {
         mavenLocal()
         grailsCentral()
         mavenCentral()
+        mavenRepo "http://repo.spring.io/release"
+        mavenRepo "http://repo.spring.io/milestone"
+        mavenRepo "http://repo.spring.io/snapshot"
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
@@ -48,20 +51,28 @@ grails.project.dependency.resolution = {
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
-        // runtime 'mysql:mysql-connector-java:5.1.27'
+        runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1100-jdbc41'
+
+        //compile "org.springframework:spring-orm:$springVersion"
+
+        compile 'org.springframework.cloud:spring-cloud-cloudfoundry-connector:1.0.0.RELEASE'
+        compile('org.springframework.cloud:spring-cloud-spring-service-connector:1.0.0.RELEASE') {
+            excludes('spring-context', 'spring-context-support')
+        }
     }
 
     plugins {
         // plugins for the build system only
-        build ":tomcat:7.0.52.1"
+        build ":tomcat:7.0.53"
 
         // plugins for the compile step
         compile ":scaffolding:2.0.3"
         compile ':cache:1.1.1'
 
         // plugins needed at runtime but not for compilation
-        runtime ":hibernate:3.6.10.13" // or ":hibernate4:4.5.1"
+        //runtime ":hibernate:3.6.10.13" // or ":hibernate4:4.5.1"
+        runtime ":hibernate4:4.3.5.3" // or ":hibernate:3.6.10.15"
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.0.2"
         runtime ":jquery-ui:1.10.3"
