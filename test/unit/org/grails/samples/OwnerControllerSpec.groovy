@@ -16,7 +16,7 @@ class OwnerControllerSpec extends Specification{
 
 	void 'can add with the get method'() {
         when:
-        controller.request.method = 'GET'
+        request.method = 'GET'
         def model = controller.add()
 
 		then:
@@ -25,37 +25,39 @@ class OwnerControllerSpec extends Specification{
 
 	void 'fails on invalid owner'() {
 		when:
-        controller.request.method = 'POST'
+        request.method = 'POST'
         def model = controller.add()
 
         then:
-        model.ownerBean?.hasErrors()
+        model.ownerBean.hasErrors()
         !view
 	}
 
-	void 'can add a valid owner'() {
+	void 'can add a valid owner with the post method'() {
         given:
-		controller.params.owner = [
+		request.method = 'POST'
+		params.owner = [
 			firstName: 'fred',
 			lastName:  'flintstone',
 			address:   'rocky street',
 			city:      'dinoville',
-			telephone: '347239873']
-
+			telephone: '347239873'
+		]
+		
         when:
 		controller.add()
 
         then:
-		controller.response.redirectUrl =~ '/owner/show/\\d+'
+		response.redirectUrl =~ '/owner/show/\\d+'
 	}
 
 	void 'finds no owners when there are none'() {
 		when:
-        controller.request.method = 'POST'
+        request.method = 'POST'
 		def model = controller.find()
 
         then:
-        model?.message == 'owners.not.found'
+        model.message == 'owners.not.found'
 	}
 
 	void 'can find a specific owner'() {
@@ -71,12 +73,12 @@ class OwnerControllerSpec extends Specification{
         saved
 
         when:
-        controller.request.method = 'POST'
-		controller.params.lastName = 'flintstone'
+        request.method = 'POST'
+		params.lastName = 'flintstone'
 		controller.find()
 
         then:
-        controller.response.redirectUrl == '/owner/show/' + owner.id
+        response.redirectUrl == '/owner/show/' + owner.id
 	}
 
 	void 'can find several owners'() {
@@ -85,13 +87,13 @@ class OwnerControllerSpec extends Specification{
 		createOwner(lastName: 'flintstone').save()
 
 		when:
-        controller.request.method = 'POST'
-		controller.params.lastName = 'flintstone'
+        request.method = 'POST'
+		params.lastName = 'flintstone'
 		controller.find()
 
 		then:
         view == '/owner/selection'
-        model?.owners?.size() == 2
+        model.owners.size() == 2
 	}
 
 	private Owner createOwner(Map data) {
