@@ -1,8 +1,10 @@
 <head>
   <meta name="layout" content="main">
   <title>View Source Code</title>
-<r:require modules="codemirror,jquery-ui"/>
-<r:script>
+  <asset:javascript src="libs/codemirror.js" />
+  <asset:javascript src="viewSource.js" />
+  <asset:stylesheet href="codemirror.css" />
+<g:javascript>
   $(function () {
     $('.sourceCode').each(function(index,element) {
       var myCodeMirror = CodeMirror.fromTextArea(element, {
@@ -41,7 +43,7 @@
     });
     $('#viewBtn').click();
   });
-</r:script>
+</g:javascript>
 <style>
   .CodeMirror div {
     font-family: inherit;

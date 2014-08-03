@@ -12,12 +12,12 @@
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
-		<r:require modules="jquery,application"/>
+        <asset:stylesheet src="application.css"/>
+        <asset:javascript src="application.js"/>
 		<g:layoutHead/>
-		<r:layoutResources/>
 	</head>
 	<body>
-		<header><g:img dir="images" file="banner-graphic.png"/></header>
+		<header><asset:image src="banner-graphic.png" /></header>
 
 		<g:if test="${controllerName != 'viewSource'}">
 		<aside>
@@ -31,9 +31,8 @@
 		</div>
 
 		<footer>
-			<div class="logo"><g:img dir="images" file="springsource-logo.png"/></div>
+			<div class="logo"><asset:image src="springsource-logo.png" /></div>
 			<div><g:link uri="/">Home</g:link></div>
 		</footer>
-		<r:layoutResources/>
 	</body>
 </html>

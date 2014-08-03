@@ -11,7 +11,7 @@
 	<h1>The Grails PetClinic Application</h1>
 
 	<table class="updated">
-	<tr><td>Updated:</td><td>15.SEP.2012</td><td>Graeme Rocher</td></tr>
+	   <tr><td>Updated:</td><td>August 2014</td><td>Ken Krebs (kktec)</td></tr>
 	</table>
 
 
@@ -89,7 +89,7 @@
 	</p>
 
 	<ul>
-		<li>Grails 2.1 or above</li>
+		<li>Grails 2.3 or above</li>
 		<li>Java SDK 6 or above</li>
 	</ul>
 
