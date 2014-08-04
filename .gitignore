@@ -8,6 +8,11 @@
 .DS_Store
 /target/
 
+### Eclipse files
+.project
+.classpath
+.settings
+
 ### IDEA Files
 .idea/
 *.iml

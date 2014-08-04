@@ -187,13 +187,13 @@
 		<li><span style="font-weight: bold; font-style: italic;">org.grails.samples.Person</span> provides a superclass for all objects that	implement the notion of a person.</li>
 		<li><span style="font-weight: bold; font-style: italic;">org.grails.samples.Vet</span> is
 		an extension of <span style="font-weight: bold;">Person</span> that implements a
-		veterinarian. It holds a <span style="font-weight: bold;">List</span> of
+		veterinarian. It holds a <span style="font-weight: bold;">Set</span> of
 		specialities that the <span style="font-weight: bold;">Vet</span> is capable of.</li>
 		<li><span style="font-weight: bold; font-style: italic;">org.grails.samples.Owner</span>
 		is an extension of <span style="font-weight: bold;">Person</span> that implements a pet owner.
-		It holds a <span style="font-weight: bold;">List</span> of pets owned.</li>
+		It holds a <span style="font-weight: bold;">Set</span> of pets owned.</li>
 		<li><span style="font-weight: bold; font-style: italic;">org.grails.samples.Pet</span>
-		Implements the notion of a pet. It holds a <span style="font-weight: bold;">List</span> of
+		Implements the notion of a pet. It holds a <span style="font-weight: bold;">Set</span> of
 		visits made concerning the pet.</li>
 		<li><span style="font-weight: bold; font-style: italic;">org.grails.samples.Visit</span>
 		Implements the notion of a clinic visit
@@ -238,8 +238,10 @@
 
 	<h3>Testing</h3>
 	<ul>
-		<li><span style="font-weight: bold; font-style: italic;">org.grails.samples.OwnerControllerTests</span>
-		is a simple controller test that extends from grails.test.ControllerUnitTestCase and tests the OwnerController.</li>
+        <li><span style="font-weight: bold; font-style: italic;">All Domain classes</span>
+        have a set of Spock tests for validation logic.</li>
+        <li><span style="font-weight: bold; font-style: italic;">org.grails.samples.OwnerControllerSpec</span>
+        is a simple controller Spock test that tests the OwnerController.</li>
 	</ul>
 
 	<h3>Downloads</h3>
@@ -255,8 +257,10 @@
 	<p>
 		Make sure the PetClinic web application is running by typing "grails run-app" from the root of the project and then browse to
 		<a href="http://localhost:8080/petclinic">http://localhost:8080/petclinic</a>.
+    <p>
+        NOTE: A feature is available to demonstrate live editing of the code in the running app itself.
+        The live editing of source files will only work when executing "grails run-app", not when deployed as a war.
 	</p>
-
 
 	<h3>Deploying the PetClinic Application</h3>
 	<p>

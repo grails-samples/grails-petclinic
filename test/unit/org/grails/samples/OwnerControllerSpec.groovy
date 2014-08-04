@@ -2,8 +2,6 @@ package org.grails.samples
 
 import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
-import org.junit.Before
-import spock.lang.Ignore
 import spock.lang.Specification
 
 @TestFor(OwnerController)
