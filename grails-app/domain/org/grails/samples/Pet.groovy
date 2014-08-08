@@ -15,8 +15,10 @@ class Pet {
 	static hasMany = [visits: Visit]
 
 	static constraints = {
-		name blank:false, validator: { val, obj ->
-			if (!obj.id && obj.owner?.pets?.find { it.name == val } ) return 'pet.duplicate'
+		name blank: false, validator: { name, pet ->
+			if (!pet.id && pet.owner?.pets?.find { it.name == name })  {
+				return 'pet.duplicate'
+			}
 		}
 	}
 }
