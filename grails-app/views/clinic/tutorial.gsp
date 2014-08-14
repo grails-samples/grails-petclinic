@@ -10,9 +10,17 @@
 
 	<h1>The Grails PetClinic Application</h1>
 
-	<table class="updated">
-	   <tr><td>Updated:</td><td>August 2014</td><td>Ken Krebs (kktec)</td></tr>
-	</table>
+    <table class="updated">
+       <tr><td>Updated:</td><td>August 2014</td><td>Ken Krebs (kktec)</td></tr>
+    </table>
+
+    <h2>What's New</h2>
+    <table class="updated">
+       <tr><td>Grails 2.4.3</td></tr>
+       <tr><td>Asset Pipeline plugin replaces Resources</td></tr>
+       <tr><td>Domain validation tests</td></tr>
+       <tr><td>Geb functional tests</td></tr>
+    </table>
 
 
 <!-- === INTRODUCTION ====================================================== -->
@@ -89,7 +97,7 @@
 	</p>
 
 	<ul>
-		<li>Grails 2.3 or above</li>
+		<li>Grails 2.4.3 or above</li>
 		<li>Java SDK 6 or above</li>
 	</ul>
 
@@ -240,6 +248,8 @@
 	<ul>
         <li><span style="font-weight: bold; font-style: italic;">All Domain classes</span>
         have a set of Spock tests for validation logic.</li>
+        <li><span style="font-weight: bold; font-style: italic;">Some pages/useCases</span>
+        have a set of Geb functional tests: Welcome, Veterinarians, FindOwner, and AddOwner.</li>
         <li><span style="font-weight: bold; font-style: italic;">org.grails.samples.OwnerControllerSpec</span>
         is a simple controller Spock test that tests the OwnerController.</li>
 	</ul>

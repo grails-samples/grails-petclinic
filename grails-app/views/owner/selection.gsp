@@ -17,16 +17,16 @@
 				<th>Pets</th>
 			</tr>
 			</thead>
-			<g:each var="owner" in="${owners}">
+			<g:each var="o" in="${owners}">
 				<tr>
 					<td>
-						<g:link action="show" id="${owner.id}">${owner.firstName} ${owner.lastName}</g:link>
+                        <g:link action="show" id="${o.id}">${o.firstName} ${o.lastName}</g:link>
 					</td>
-					<td>${owner.address}</td>
-					<td>${owner.city}</td>
-					<td>${owner.telephone}</td>
+					<td>${o.address}</td>
+					<td>${o.city}</td>
+					<td>${o.telephone}</td>
 					<td>
-						<g:each var="pet" in="${owner.pets}">
+						<g:each var="pet" in="${o.pets}">
 							${pet.name} &nbsp;
 						</g:each>
 					</td>

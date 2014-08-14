@@ -34,13 +34,13 @@ class OwnerControllerSpec extends Specification{
 	void 'can add a valid owner with the post method'() {
         given:
 		request.method = 'POST'
-		params.owner = [
-			firstName: 'fred',
-			lastName:  'flintstone',
-			address:   'rocky street',
-			city:      'dinoville',
-			telephone: '347239873'
-		]
+		params.with {
+			owner_firstName = 'fred'
+			owner_lastName =  'flintstone'
+			owner_address =   'rocky street'
+			owner_city =      'dinoville'
+			owner_telephone = '347239873'
+		}
 		
         when:
 		controller.add()
