@@ -9,8 +9,8 @@ class OwnerController {
 			return [ownerBean: new Owner()]
 		}
 
-		def owner = petclinicService.createOwner(params.owner?.firstName, params.owner?.lastName,
-			params.owner?.address, params.owner?.city, params.owner?.telephone)
+		def owner = petclinicService.createOwner(params.owner_firstName, params.owner_lastName,
+			params.owner_address, params.owner_city, params.owner_telephone)
 
 		if (owner.hasErrors()) {
 			return [ownerBean: owner]

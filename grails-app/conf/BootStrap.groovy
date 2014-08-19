@@ -1,3 +1,4 @@
+import org.grails.samples.Owner
 import org.grails.samples.PetType
 import org.grails.samples.Speciality
 import org.grails.samples.Vet
@@ -29,6 +30,15 @@ class BootStrap {
 			for (String type in ['dog', 'lizard', 'cat', 'snake', 'bird', 'hamster']) {
 				new PetType(name: type).save(failOnError: true)
 			}
+		}
+		
+		if(!Owner.count) {
+			new Owner(lastName: 'Smith', firstName: 'John', address: '123 EZ St.', city: 'NO', telephone: '123')
+				.save(failOnError: true)
+			new Owner(lastName: 'Smith', firstName: 'Jane', address: '456 My Way', city: 'NY', telephone: '456')
+				.save(failOnError: true)
+			new Owner(lastName: 'Bubinga', firstName: 'Woody', address: '789 Hard Road', city: 'WI', telephone: '789')
+				.save(failOnError: true)
 		}
 	}
 }
