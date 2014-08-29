@@ -14,7 +14,7 @@
 			<g:if test="${pet.id}">
 				<g:hiddenField name="id" value="${pet.id}" />
 			</g:if>
-			<g:hiddenField name="pet.owner.id" value="${pet.owner.id}"></g:hiddenField>
+			<g:hiddenField name="pet_owner_id" value="${pet.owner.id}"></g:hiddenField>
 			<table>
 				<tr>
 					<th>
