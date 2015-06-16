@@ -55,9 +55,14 @@ grails.project.dependency.resolution = {
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
 		
-		test "org.gebish:geb-spock:$gebVersion"
-		test "org.seleniumhq.selenium:selenium-support:$seleniumVersion"
-		test "org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion"
+        test "org.gebish:geb-spock:$gebVersion"
+        test "org.seleniumhq.selenium:selenium-support:$seleniumVersion"
+        // we need ghostdriver for phantomjs...
+        test( "com.github.detro.ghostdriver:phantomjsdriver:1.1.0" ) {
+                transitive = false
+        }
+        test "org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion"
+        test ("org.seleniumhq.selenium:selenium-remote-driver:$seleniumVersion") // Needed by phantomjsdriver
     }
 
     plugins {
