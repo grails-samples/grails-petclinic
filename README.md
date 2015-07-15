@@ -3,11 +3,11 @@ Petclinic Sample Application
 
 This is the standard introductory sample application for Grails. To get started with it, simply clone the repository and then from within your local copy run:
 
-    ./grailsw run-app
+    ./gradlew run
 
 on Unix-like systems, or
 
-    grailsw run-app
+    gradlew run
 
 on Windows via the command prompt. Once the server has started up, you can copy the URL and paste it in a browser.
 
