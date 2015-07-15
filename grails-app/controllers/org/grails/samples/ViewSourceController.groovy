@@ -2,8 +2,6 @@ package org.grails.samples
 
 class ViewSourceController {
 
-    def grailsApplication
-
     def controllerAndView(String controllerClass, String viewPath) {
         renderFiles ([
             [id:controllerClass, path:"controllers", ext:"groovy"],

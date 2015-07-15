@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
@@ -31,7 +32,6 @@
 		</div>
 
 		<footer>
-			<div class="logo"><asset:image src="springsource-logo.png" /></div>
 			<div><g:link uri="/">Home</g:link></div>
 		</footer>
 	</body>
