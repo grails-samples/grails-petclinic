@@ -12,3 +12,4 @@ on Unix-like systems, or
 on Windows via the command prompt. Once the server has started up, you can copy the URL and paste it in a browser.
 
 Follow the tutorial link to learn about Grails or click on the View Source for Controller/View links to see the underlying code for whatever page you are currently on.
+test
